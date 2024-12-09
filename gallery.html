@@ -33,6 +33,19 @@
     header h1 {
       margin: 0;
       font-size: 2.5em;
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes neon {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff;
+      }
+      50% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ff00, 0 0 20px #00ff00, 0 0 25px #00ff00, 0 0 30px #00ff00;
+      }
+      100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff, 0 0 30px #00ffff;
+      }
     }
 
     .gallery-container {
@@ -67,9 +80,9 @@
     }
 
     .description-container {
-      background-color: rgba(255, 255, 255, 0.7); 
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 10px;
-      border-radius: 5px; 
+      border-radius: 5px;
       margin-top: 10px;
       font-size: 0.9em;
       color: darkslategray;
@@ -89,7 +102,8 @@
       z-index: 10;
     }
 
-    .lightbox img {
+    .lightbox img,
+    .lightbox video {
       max-width: 90%;
       max-height: 90%;
       border-radius: 10px;
@@ -146,14 +160,14 @@
 <body>
 
   <header>
-    <h1>Memorable Pictures Gallery</h1>
-    <p>My most memorable memories in the form of pictures</p>
+    <h1>MEMORABLE PICTURES GALLERY</h1>
+    <p>✯My most memorable memories in the form of pictures✯</p>
   </header>
 
   <div class="gallery-container">
     <div class="gallery-item">
       <a href="#img1">
-        <img src="image\gallerypic1.jpg" alt="Memorable Picture 1">
+        <img src="image/gallerypic1.jpg" alt="Memorable Picture 1">
       </a>
       <div class="description-container">
         <p>My old Persian cat after getting lion cut</p>
@@ -161,31 +175,32 @@
     </div>
     <div class="gallery-item">
       <a href="#img2">
-        <img src="image\gallerypic2.jpg" alt="Memorable Picture 2">
+        <img src="image/gallerypic2.jpg" alt="Memorable Picture 2">
       </a>
       <div class="description-container">
-        <p>Captured during a family trip to Langkawi</p>
+        <p>Captured during a trip to Tasik Cermin ,Ipoh</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="#img3">
-        <img src="image\gallerypic3.jpg" alt="Memorable Picture 3">
+        <img src="image/gallerypic3.jpg" alt="Memorable Picture 3">
       </a>
       <div class="description-container">
-        <p>Group picture after tuition</p>
+        <p>Group picture in front of Istana Lama Seri Menanti</p>
       </div>
     </div>
     <div class="gallery-item">
-      <a href="#img4">
-        <img src="image\gallerypic4.jpg" alt="Memorable Picture 4">
+      <a href="#video4">
+        <video src="image/video_gallery.mp4" poster="image/gallerypic4.jpg" controls width="100%" height="200px" alt="Memorable Video 4"></video>
       </a>
       <div class="description-container">
-        <p>Trips with friends to Langkawi</p>
+        <p>Capture during trip to Tasik Cermin , Ipoh</p>
       </div>
     </div>
+
     <div class="gallery-item">
       <a href="#img5">
-        <img src="image\gallerypic5.jpg" alt="Memorable Picture 5">
+        <img src="image/gallerypic5.jpg" alt="Memorable Picture 5">
       </a>
       <div class="description-container">
         <p>My old housemate during Semester 1</p>
@@ -193,23 +208,23 @@
     </div>
     <div class="gallery-item">
       <a href="#img6">
-        <img src="image\gallerypic6.jpg" alt="Memorable Picture 6">
+        <img src="image/gallerypic6.jpg" alt="Memorable Picture 6">
       </a>
       <div class="description-container">
-        <p>My cat , Elmo</p>
+        <p>My cat, Elmo</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="#img7">
-        <img src="image\gallerypic7.jpg" alt="Memorable Picture 7">
+        <img src="image/gallerypic7.jpg" alt="Memorable Picture 7">
       </a>
       <div class="description-container">
-        <p>My parents during a trip to Masjid Kristal , Terangganu</p>
+        <p>My parents during a trip to Masjid Kristal, Terangganu</p>
       </div>
     </div>
     <div class="gallery-item">
       <a href="#img8">
-        <img src="image\gallerypic8.jpg" alt="Memorable Picture 8">
+        <img src="image/gallerypic8.jpg" alt="Memorable Picture 8">
       </a>
       <div class="description-container">
         <p>Hari Raya Picture 2023</p>
@@ -217,47 +232,40 @@
     </div>
   </div>
 
+  <a href="index.html" class="back-link">Back to Homepage</a>
+
   <div class="lightbox" id="img1">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic1.jpg" alt="Memorable Picture 1">
+    <img src="image/gallerypic1.jpg" alt="Memorable Picture 1">
   </div>
-
   <div class="lightbox" id="img2">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic2.jpg" alt="Memorable Picture 2">
+    <img src="image/gallerypic2.jpg" alt="Memorable Picture 2">
   </div>
-
   <div class="lightbox" id="img3">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic3.jpg" alt="Memorable Picture 3">
+    <img src="image/gallerypic3.jpg" alt="Memorable Picture 3">
   </div>
-
-  <div class="lightbox" id="img4">
+  <div class="lightbox" id="video4">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic4.jpg" alt="Memorable Picture 4">
+    <video src="image/video_gallery.mp4" controls width="90%" height="auto"></video>
   </div>
-
   <div class="lightbox" id="img5">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic5.jpg" alt="Memorable Picture 5">
+    <img src="image/gallerypic5.jpg" alt="Memorable Picture 5">
   </div>
-
   <div class="lightbox" id="img6">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic6.jpg" alt="Memorable Picture 6">
+    <img src="image/gallerypic6.jpg" alt="Memorable Picture 6">
   </div>
-
   <div class="lightbox" id="img7">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic7.jpg" alt="Memorable Picture 7">
+    <img src="image/gallerypic7.jpg" alt="Memorable Picture 7">
   </div>
-
   <div class="lightbox" id="img8">
     <a href="#" class="close-btn">&times;</a>
-    <img src="image\gallerypic8.jpg" alt="Memorable Picture 8">
+    <img src="image/gallerypic8.jpg" alt="Memorable Picture 8">
   </div>
-
-  <a href="index.html" class="back-link">Back to Homepage</a>
 
   <footer>
     <p>&copy; 2024 Naufal Gallery. All Rights Reserved.</p>
