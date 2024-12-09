@@ -22,37 +22,34 @@
       text-align: center;
     }
 
-	header {
-	  background: linear-gradient(to right, #34495e, #2c3e50);
-	  padding: 10px 20px;  
-	  color: white;
-	  display: flex;
-	  justify-content: space-between; 
-	  align-items: center;
-	  flex-wrap: wrap;
-	  height: px;
-	}
+    header {
+      background: linear-gradient(to right, #34495e, #2c3e50);
+      padding: 10px 20px;  
+      color: white;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-	header h1 {
-	  margin: 0;
-	  font-size: 1.8em; 
-	  font-weight: bold;
-	  color: #ecf0f1;
-	  text-transform: uppercase;
-	  letter-spacing: 1px;
-	  animation: neon 1.5s ease-in-out infinite alternate;
-	}
+    header h1 {
+      margin: 0;
+      font-size: 1.8em; 
+      font-weight: bold;
+      color: #ecf0f1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
 
-	header img {
-	  width: 70px;  
-	  height: 70px; 
-	  border-radius: 50%;
-	  border: 2px solid #ecf0f1;
-	  margin-top: 15px;
-	  margin-left: 20px;  /* Adds space between the text and the image */
-	}
-
-
+    header img {
+      width: 70px;  
+      height: 70px; 
+      border-radius: 50%;
+      border: 2px solid #ecf0f1;
+      margin-top: 15px;
+      margin-left: 20px;  
+    }
 
     @keyframes neon {
       0% {
@@ -127,22 +124,36 @@
       font-size: 0.9em;
     }
 
-    footer .social-links {
-      margin-top: 10px;
+    .contact-box {
+      background-color: #2c3e50;
+      padding: 20px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+	  animation: neon 1.5s ease-in-out infinite alternate;
+    }
+
+    .contact-box a:hover {
+      background-color: #34495e;
+    }
+
+    .social-links {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 15px; 
+      margin-top: 10px;
     }
 
-    footer .social-links a img {
-      width: 30px;
-      height: 30px;
+    .social-links a img {
+      width: 33px;
+      height: 33px;
       border-radius: 50%;
       transition: transform 0.3s;
-      border: 2px solid #ecf0f1;
     }
 
-    footer .social-links a img:hover {
+    .social-links a img:hover {
       transform: scale(1.1);
     }
 
@@ -177,17 +188,6 @@
 
       footer p {
         font-size: 0.8em;
-      }
-
-      footer .social-links a img {
-        width: 25px;
-        height: 25px;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .section-container {
-        grid-template-columns: 1fr; 
       }
     }
   </style>
@@ -234,12 +234,13 @@
   
     <a href="favorites.html">
       <img src="image\favoritelogo.jpg" alt="Favorite Icon">
-      <h4>Favorites</h4>
+      <h4>Favorites</h4>	
       <p>Knows my favorite things.</p>
     </a>
   </div>
 
-  <footer>
+  <div class="contact-box">
+     <p><h2>CONTACT ME</h2></p>
     <div class="social-links">
       <a href="https://www.instagram.com/mgt.nfl/">
         <img src="image\insta_logo.jpg" alt="Instagram">
@@ -247,11 +248,15 @@
       <a href="https://www.tiktok.com/@kingn283?_t=8s1Q4Ja1bq3&_r=1">
         <img src="image\tiktok_logo.jpg" alt="TikTok">
       </a>
+    <a href="https://wa.me/+601164046283">
+      <img src="image/whatsapp_logo.png" alt="WhatsApp">
     </div>
+  </div>
+
+  <footer>
+
     <p>&copy; 2024 Naufal. All Rights Reserved.</p>
   </footer>
-  
 
 </body>
-
 </html>
