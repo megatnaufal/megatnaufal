@@ -31,6 +31,19 @@
       margin: 0;
       font-size: 2.5em;
       font-weight: bold;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    }
+	
+	    @keyframes neon {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff;
+      }
+      50% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ff00, 0 0 20px #00ff00, 0 0 25px #00ff00, 0 0 30px #00ff00;
+      }
+      100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff, 0 0 30px #00ffff;
+      }
     }
 
     .education-container {
@@ -120,7 +133,8 @@
 <body>
 
   <header>
-    <h1>Education</h1>
+    <h1>EDUCATION</h1>
+	<p>✯My education that get me where I am today✯</p>
   </header>
 
   <div class="education-container">
